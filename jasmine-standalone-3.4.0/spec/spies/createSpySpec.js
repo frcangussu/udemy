@@ -1,4 +1,5 @@
 /**
+ * cria uma função spy do zero
  * é uma função global JS do Jasmine
  * possui todos os atributos de um objeto spy comum
  * recebe como parâmetro o nome da função a ser criado o spy
