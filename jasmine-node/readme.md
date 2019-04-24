@@ -111,3 +111,79 @@
         Press tab to list possible options.
         > yes        
         ```
+
+1. ### Inicializando o Karma
+    - Inicie o Karma
+        ```bash
+        karma start
+        ```
+    - Saia do modo escuta
+        ```bash
+        Ctrl+C
+        ```
+
+# Executando o Karma com NodeJS
+- Renomeie o script do Jasmine de 'test' para 'test-jasmine'
+- Adicione os novos scripts de testes contendo
+    - "test": "karma start --single-run"
+    - "test-dev":"karma start"
+- resultado:
+    ```json
+    "scripts": {
+        "test-jasmine": "jasmine",
+        "test-dev": "karma start",
+        "test": "karma start --single-run"
+    },
+    ```
+- Execute os testes
+    ```bash
+    npm run test
+    ```
+- Termine os testes
+    - Ctrl+C
+
+
+# Karma com o Browserify
+- converte os "require" para a tag "script"
+1. ### Instalação
+    ```bash
+    npm install --save-dev browserify
+    ```
+    ```bash
+    npm install --save-dev watchify
+    ```
+    ```bash
+    npm install --save-dev karma-browserify
+    ```
+
+1. ### karma.conf.js
+    
+    - Em 'frameworks' adicione 'browserify'
+        ```javascript
+        frameworks: ['jasmine','browserify']
+        ```
+
+    - Adicione o diretório 'helpers' em 'files'
+        ```javascript
+        'spec/helpers/**/SpecHelper.js'
+        ```
+
+    - Adicione em 'preprocessors'
+        ```javascript
+        'spec/**/Spec.js':['browserify']
+        ```
+
+    - Execute os testes
+        ```bash
+        npm test
+        ```
+
+    - Edite o arquivo de teste 'exemploSpec.js' e salve-o para que os testes sejam executados novamente de modo automático
+
+    - Termine os testes
+        ```
+        Ctrl+C
+        ```
+
+
+
