@@ -1,0 +1,2 @@
+1. ### Exemplos básicos do jasmine: [ver arquivos](https://github.com/frcangussu/udemy/tree/master/jasmine-standalone-3.4.0/spec)
+1. ### Jasmine + NodeJS + Karma: [documentação](jasmine-node/readme.md)
