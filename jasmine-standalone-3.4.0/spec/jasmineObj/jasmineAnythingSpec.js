@@ -1,5 +1,5 @@
 /**
- * serve para verificar se um objeto o variável é diferente de "null" ou "undefined"
+ * serve para verificar se um objeto ou variável é diferente de "null" ou "undefined"
  * pode ser utilizado em spies para certificar que um valor foi passado como parâmetro
  */
 describe("Testes do objeto jasmine.anything",()=>{
